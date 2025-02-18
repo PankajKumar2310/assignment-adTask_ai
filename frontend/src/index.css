@@ -1,0 +1,136 @@
+/* Global Reset and Overflow Fix */
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, 
+body {
+  overflow-x: hidden;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: #000000;
+  position: relative;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#root {
+  width: 100%;
+  overflow-x: hidden;
+  position: relative;
+  background-color: #000000;
+}
+
+/* Global Container Styles */
+.container,
+.section,
+section,
+.wrapper,
+.page-wrapper {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+  position: relative;
+  margin: 0;
+  padding-left: 0;
+  padding-right: 0;
+  background-color: #000000;
+}
+
+/* Fix for fixed position elements */
+.header-wrapper,
+.fixed-element {
+  width: 100%;
+  left: 0;
+  right: 0;
+}
+
+/* Mobile Optimization */
+@media screen and (max-width: 767px) {
+  body {
+    position: relative;
+    width: 100%;
+    overflow-x: hidden;
+  }
+
+  .container,
+  .section,
+  section {
+    width: 100%;
+    overflow-x: hidden;
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+/* Global Font Settings */
+* {
+  font-family: 'Poppins', sans-serif;
+  letter-spacing: 0.3px;
+  word-spacing: 1px;
+}
+
+/* Heading Text */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Poppins', sans-serif;
+  letter-spacing: 0.5px;
+  word-spacing: 2px;
+}
+
+/* Body Text */
+p, span, div, button, input, textarea {
+  font-family: 'Poppins', sans-serif;
+  letter-spacing: 0.3px;
+  word-spacing: 1.5px;
+}
+
+/* Navigation and Buttons */
+nav, button, .btn {
+  font-family: 'Poppins', sans-serif;
+  letter-spacing: 0.4px;
+  word-spacing: 1.5px;
+}
+
+/* Card and Section Titles */
+.section-title, 
+.card-title, 
+.features-title,
+.services-title,
+.testimonials-title {
+  font-family: 'Poppins', sans-serif;
+  letter-spacing: 0.5px;
+  word-spacing: 2px;
+}
+
+/* Card and Section Content */
+.card-content,
+.section-content,
+.features-description,
+.services-description,
+.testimonials-description {
+  font-family: 'Poppins', sans-serif;
+  letter-spacing: 0.3px;
+  word-spacing: 1.5px;
+  line-height: 1.5;
+}
+
+/* Small Text */
+.small-text,
+.caption,
+.footer-text {
+  font-family: 'Poppins', sans-serif;
+  letter-spacing: 0.2px;
+  word-spacing: 1px;
+}

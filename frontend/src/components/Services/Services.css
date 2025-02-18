@@ -1,0 +1,732 @@
+.services-section {
+  position: relative;
+  z-index: 1;
+  background-color: transparent;
+  padding: 80px 0;
+  color: white;
+}
+
+.services-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+.services-label {
+  color: #4A90E2;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 16px;
+}
+
+.services-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+.contact-button-services{
+  margin-top: 20px;
+  width: 185px;
+    height: 48px;
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif;
+    border-radius: 40px;
+    border-width: 1px;
+    background: url('https://s3-alpha-sig.figma.com/img/041f/3a07/cede6e34b2b24205d3024118619c50d9?Expires=1740355200&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=eIK-YQ06X9-Ck4KNBP~PGpnQBTnwU~3KvS~vfCqTemEZflASdnRwR-ZqXswbpVtDXlpgKIvNYIrD4pAuWOGOgcQEPlBWMrML8AipetrBZNp0yUKB3X--PsjoyQo32XKlF0VhQtm4S2bXINA8tsUX~gYHuFV6xxbqtrf~XyXl8EP4IeLgtcdHCyIAXvgytNUQqUcficUMICDoit~63OmR4P9EXo91oI~UGDLzy~j4vIM8iwqzUni035rza5PNyaZiPGDjRUTU6HcSmXEleursO-mwbcrThWxR~pzLI5x2Xa4goO8CF5OWfnJApvMPMhHZfNI3X-LAwivne5Hx3TFuEQ__');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    border: 1px solid;
+    background-color: transparent;
+}
+.services-title {
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: white;
+  margin: 0;
+}
+
+.services-subtitle {
+  font-size: 2.5rem;
+  color: #4A90E2;
+  margin: 0;
+}
+
+.services-grid {
+  position: relative;
+  display: grid;
+  gap: 0;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.service-card-container {
+  position: relative;
+  width: 350px;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+}
+
+/* Glow Effect */
+.glow-container {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.outer-glow {
+  position: absolute;
+  width: 300px;
+  height: 200px;
+  top: 50px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(91, 105, 139, 0.4);
+  opacity: 0.8;
+  filter: blur(80px);
+  border-radius: 50%;
+}
+
+.inner-glow {
+  position: absolute;
+  width: 300px;
+  height: 150px;
+  top: 75px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(91, 105, 139, 0.5);
+  opacity: 0.8;
+  filter: blur(100px);
+  border-radius: 50%;
+}
+
+/* Gradient Borders */
+.gradient-borders > div {
+  position: absolute;
+  background: linear-gradient(to right, #0C0F16, #788DC5, #0C0F16);
+}
+
+.border-top, .border-bottom {
+  left: 5%;
+  width: 90%;
+  height: 1px;
+}
+
+.border-top { top: 0; }
+.border-bottom { bottom: 0; }
+
+.border-left, .border-right {
+  top: 5%;
+  height: 90%;
+  width: 1px;
+  background: linear-gradient(to bottom, #0C0F16, #788DC5, #0C0F16) !important;
+}
+
+.border-left { left: 0; }
+.border-right { right: 0; }
+
+/* Center Lines */
+.center-lines > div {
+  position: absolute;
+  background: white;
+}
+
+.line-top, .line-bottom {
+  width: 30px;
+  height: 2px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.line-top { top: 0; }
+.line-bottom { bottom: 0; }
+
+.line-left, .line-right {
+  width: 2px;
+  height: 30px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.line-left { left: 0; }
+.line-right { right: 0; }
+
+/* Corner Pins */
+.pin {
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  background: #65749B;
+  border-radius: 2px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pin-inner {
+  width: 6px;
+  height: 6px;
+  background: #2C354A;
+  border-radius: 1px;
+}
+
+.top-left { 
+  top: -8px; 
+  left: -8px; 
+  transform: rotate(45deg);
+}
+
+.top-right { 
+  top: -8px; 
+  right: -8px; 
+  transform: rotate(45deg);
+}
+
+.bottom-left { 
+  bottom: -8px; 
+  left: -8px; 
+  transform: rotate(45deg);
+}
+
+.bottom-right { 
+  bottom: -8px; 
+  right: -8px; 
+  transform: rotate(45deg);
+}
+
+/* Content Styling */
+.service-content {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  text-align: center;
+}
+
+.service-title {
+  font-size: 24px;
+  font-weight: 300;
+  font-family: 'Poppins', sans-serif;
+}
+
+.service-description {
+  width: 90%;
+  font-size: 12px;
+  font-weight: 300;
+  font-family: 'Poppins', sans-serif;
+}
+
+.service-card:hover {
+  transform: scale(1.02);
+  box-shadow: 0 4px 20px rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+.service-icon {
+  width: 88px;
+  height: 88px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 8px;
+
+  /* border: 1px solid rgba(255, 255, 255, 0.2); */
+}
+
+.service-icon img {
+  width: 88px;
+  height: 88px;
+
+  object-fit: contain;
+}
+
+.contact-button {
+  background: transparent;
+  border: 1px solid #4A90E2;
+  color: #4A90E2;
+  padding: 12px 32px;
+  border-radius: 24px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 40px;
+}
+
+.contact-button:hover {
+  background: rgba(74, 144, 226, 0.1);
+  box-shadow: 0 0 20px rgba(74, 144, 226, 0.2);
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .services-section {
+    padding: 60px 0;
+  }
+
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .services-title,
+  .services-subtitle {
+    font-size: 2rem;
+  }
+
+  .service-card {
+    padding: 24px;
+  }
+}
+
+@media (max-width: 480px) {
+  .services-title,
+  .services-subtitle {
+    font-size: 1.75rem;
+  }
+
+  .service-description {
+    font-size: 0.9rem;
+  }
+} 
+
+
+.features-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+  margin-bottom: 0px;
+}
+
+.features-description-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  gap: 30px;
+  position: relative;
+}
+
+.features-description-container-left {
+  flex: 1;
+  text-align: end;
+  padding-right: 20px;
+}
+
+.features-description-container-right {
+  flex: 1;
+  text-align: left;
+  padding-left: 20px;
+}
+
+.line-image,
+.line-image-2 {
+  width: 180px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, #4A90E2, transparent);
+  display: flex;
+  justify-content: right;
+  align-items: center;
+}
+
+.line-image-2 {
+  transform: rotate(180deg);
+}
+
+.features-description-container-center {
+  flex: 2;
+  text-align: center;
+  min-width: 400px;
+}
+
+.features-description-container-center-title {
+  font-size: 28px;
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+  color: rgba(217, 217, 217, 1);
+  font-weight: 600;
+  margin-bottom: 0px;
+}
+
+.features-description-container-center-description {
+  font-size: 25px;
+  margin-top: 0px;
+  text-align: center;
+  color: #9CA3AF;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+}
+.features-description-container-center-description-2 {   
+  font-family: 'Poppins', sans-serif;
+  text-align: center;
+  font-size: 10px;
+  color: rgba(217, 217, 217, 1);
+  margin-top: 0px;
+  padding-top: 0px;
+  font-weight: bold;
+}
+
+/* Glow Effect for Bottom Text */
+.bottom-text-glow-container {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.bottom-text-outer-glow {
+  position: absolute;
+  width: 500px;
+  height: 200px;
+  bottom: -150px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(91, 105, 139, 0.4);
+  opacity: 0.8;
+  filter: blur(80px);
+  border-radius: 50%;
+}
+
+.bottom-text-inner-glow {
+  position: absolute;
+  width: 400px;
+  height: 150px;
+  bottom: -125px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(91, 105, 139, 0.5);
+  opacity: 0.8;
+  filter: blur(100px);
+  border-radius: 50%;
+}
+
+/* Hide shared horizontal borders between rows */
+.service-card-container:nth-child(1) .border-bottom,
+.service-card-container:nth-child(2) .border-bottom,
+.service-card-container:nth-child(3) .border-bottom,
+.service-card-container:nth-child(4) .border-top,
+.service-card-container:nth-child(5) .border-top,
+.service-card-container:nth-child(6) .border-top {
+  display: block;
+}
+
+/* Hide shared vertical borders between columns */
+.service-card-container:not(:nth-child(3n)) .border-right,
+.service-card-container:not(:nth-child(3n+1)) .border-left {
+  display: block;
+}
+
+/* Show all pins */
+.pin {
+  display: flex; /* Show all pins by default */
+}
+
+/* Center lines - show all bottom lines */
+.line-top, .line-bottom {
+  display: none; /* Hide by default */
+}
+
+/* Show all bottom lines */
+.service-card-container:nth-last-child(-n+3) .line-bottom {
+  display: block;
+}
+
+/* Show top lines only on first row */
+.service-card-container:nth-child(-n+3) .line-top {
+  display: block;
+}
+
+/* Show all vertical lines between cards */
+.service-card-container:nth-child(2) .line-left,
+.service-card-container:nth-child(2) .line-right,
+.service-card-container:nth-child(3) .line-left,
+.service-card-container:nth-child(5) .line-left,
+.service-card-container:nth-child(5) .line-right,
+.service-card-container:nth-child(6) .line-left {
+  display: block;
+}
+
+/* Show all horizontal lines between rows */
+.service-card-container:nth-child(1) .line-bottom,
+.service-card-container:nth-child(2) .line-bottom,
+.service-card-container:nth-child(3) .line-bottom,
+.service-card-container:nth-child(4) .line-top,
+.service-card-container:nth-child(5) .line-top,
+.service-card-container:nth-child(6) .line-top {
+  display: block;
+}
+
+/* Show outer edge lines */
+.service-card-container:first-child .line-left,
+.service-card-container:nth-child(3) .line-right,
+.service-card-container:nth-child(4) .line-left,
+.service-card-container:last-child .line-right {
+  display: block;
+}
+
+/* Show top and bottom edge lines */
+.service-card-container:nth-child(-n+3) .line-top,
+.service-card-container:nth-last-child(-n+3) .line-bottom {
+  display: block;
+}
+
+/* Keep existing styles */
+.line-top, .line-bottom, .line-left, .line-right {
+  position: absolute;
+  background: white;
+}
+
+.line-top, .line-bottom {
+  width: 30px;
+  height: 2px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.line-left, .line-right {
+  width: 2px;
+  height: 30px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.line-left { left: 0; }
+.line-right { right: 0; }
+.line-top { top: 0; }
+.line-bottom { bottom: 0; }
+
+/* Keep other existing styles */
+
+/* Pin display rules for 6-card grid */
+.service-card-container:nth-child(1) .pin.bottom-right,
+.service-card-container:nth-child(2) .pin.bottom-left,
+.service-card-container:nth-child(2) .pin.bottom-right,
+.service-card-container:nth-child(3) .pin.bottom-left,
+.service-card-container:nth-child(4) .pin.top-right,
+.service-card-container:nth-child(5) .pin.top-left,
+.service-card-container:nth-child(5) .pin.top-right,
+.service-card-container:nth-child(6) .pin.top-left {
+  display: none;
+}
+
+/* Large Screens (≥992px) - Original Layout */
+@media screen and (min-width: 992px) {
+  .services-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0;
+  }
+
+  .service-card-container {
+    width: 350px;
+    height: 300px;
+  }
+}
+
+/* Medium/Tablet Screens (≥768px and <992px) */
+@media screen and (max-width: 991px) {
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    padding: 1rem;
+  }
+
+  .service-card-container {
+    width: 100%;
+    height: 320px;
+    margin: 0 auto;
+  }
+
+  .features-description-container {
+    padding: 30px 15px;
+  }
+
+  .features-description-container-left,
+  .features-description-container-right {
+    display: none; /* Hide side lines */
+  }
+
+  .features-description-container-center {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 0 15px;
+    min-width: auto;
+  }
+
+  /* Adjust glow effects for tablet */
+  .outer-glow,
+  .inner-glow {
+    width: 250px;
+  }
+}
+
+/* Mobile Screens (<768px) */
+@media screen and (max-width: 767px) {
+  .services-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+    padding: 1rem;
+  }
+
+  .service-card-container {
+    width: 100%;
+    max-width: 350px;
+    height: 300px;
+    margin: 0 auto;
+  }
+
+  .features-description-container-center {
+    max-width: 400px;
+    padding: 0 10px;
+  }
+
+  .features-description-container-center-title {
+    font-size: 24px;
+  }
+
+  .features-description-container-center-description {
+    font-size: 20px;
+  }
+
+  /* Adjust glow effects for mobile */
+  .outer-glow,
+  .inner-glow {
+    width: 200px;
+  }
+
+  .contact-button-services {
+    margin-top: 20px;
+    width: 160px;
+    height: 42px;
+    font-size: 14px;
+  }
+}
+
+/* Extra Small Screens (<576px) */
+@media screen and (max-width: 575px) {
+  .services-grid {
+    padding: 0.5rem;
+  }
+
+  .service-card-container {
+    height: 280px;
+    max-width: 300px;
+  }
+
+  .service-title {
+    font-size: 22px;
+  }
+
+  .service-description {
+    font-size: 13px;
+    width: 95%;
+  }
+
+  .service-icon {
+    width: 70px;
+    height: 70px;
+  }
+
+  .service-icon img {
+    width: 70px;
+    height: 70px;
+  }
+
+  /* Adjust glow effects for extra small screens */
+  .outer-glow,
+  .inner-glow {
+    width: 180px;
+  }
+}
+
+.shared-border-card {
+  position: relative;
+  border: none;
+  margin: 0;
+}
+
+.shared-borders {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.shared-border-horizontal {
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.3),
+    transparent
+  );
+}
+
+.shared-border-vertical {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 1px;
+  background: linear-gradient(
+    180deg,
+    transparent,
+    rgba(255, 255, 255, 0.3),
+    transparent
+  );
+}
+
+/* Position borders based on card position */
+.card-1 .shared-border-vertical,
+.card-4 .shared-border-vertical {
+  right: 0;
+}
+
+.card-2 .shared-border-vertical,
+.card-5 .shared-border-vertical {
+  right: 0;
+}
+
+.card-0 .shared-border-horizontal,
+.card-1 .shared-border-horizontal,
+.card-2 .shared-border-horizontal {
+  bottom: 0;
+}
+
+.card-3 .shared-border-horizontal,
+.card-4 .shared-border-horizontal,
+.card-5 .shared-border-horizontal {
+  bottom: 0;
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 768px) {
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .shared-border-vertical {
+    display: none;
+  }
+  
+  .shared-border-horizontal {
+    opacity: 0.5;
+  }
+}

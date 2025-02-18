@@ -1,0 +1,482 @@
+.contact-section {
+  background-color: #000000;
+  padding: 80px 0;
+  color: white;
+  position: relative;
+  overflow: hidden;
+}
+
+.features-title-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 50px;
+}
+.c-title {
+  width: 40px;
+  font-size: 14px;
+  padding: 8px 24px;
+  margin-bottom: 40px;
+  background: linear-gradient(90deg, rgba(142, 141, 141, 0.15) 0%, rgba(40, 40, 40, 0.15) 100%);
+  border-radius: 10px;
+  margin-bottom: 0px;
+}
+
+.contact-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.contact-label {
+  display: inline-block;
+  color: white;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  background: #1A1A1A;
+  padding: 8px 24px;
+  border-radius: 4px;
+  margin-bottom: 40px;
+}
+
+.contact-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  position: relative;
+}
+
+.contact-content::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  height: 100%;
+  width: 1px;
+  background: linear-gradient(to bottom, transparent, rgba(74, 144, 226, 0.3), transparent);
+}
+
+/* Left Side Styles */
+.contact-info {
+  padding-right: 40px;
+}
+
+.contact-title {
+  font-size: 2.5rem;
+  font-weight: 600;
+  margin-bottom: 24px;
+  display: flex;
+  flex-direction: column;
+  font-family: 'Poppins', sans-serif;
+  opacity: 0.8;
+  position: relative;
+}
+
+.contact-subtitle {
+  background:radial-gradient(90deg, #95a5d7 0%, #8d9cc4 42%, #E2E8F8 100%);
+  
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  /* Fallback color in case gradient isn't supported */
+  color: #384979;
+}
+
+.contact-description {
+  color: rgba(255, 255, 255, 1);
+
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 40px;
+}
+
+.contact-details {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+
+}
+
+.contact-icon {
+  width: 24px;
+  height: 24px;
+  background: rgba(74, 144, 226, 0.1);
+  border-radius: 50%;
+}
+
+.contact-item a,
+.contact-item span {
+   color: rgba(255, 255, 255, 1);
+  text-decoration: none;
+  font-size: 1rem;
+}
+
+/* Form Styles */
+.contact-form {
+  /* background: rgba(13, 13, 13, 0.95); */
+  /* border: 1px solid rgba(74, 144, 226, 0.3); */
+  border-radius: 12px;
+  padding: 40px;
+}
+
+.form-group {
+  margin-bottom: 24px;
+}
+
+.form-group label {
+  display: block;
+  color: #9CA3AF;
+  margin-bottom: 8px;
+  font-size: 0.9rem;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  background: transparent;
+  border: 1px solid  rgba(255, 255, 255, 1);;
+  border-radius: 8px;
+  padding: 12px 16px;
+  color: white;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  opacity: 0.4;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: #4A90E2;
+  box-shadow: 0 0 10px rgba(74, 144, 226, 0.2);
+}
+
+.submit-button {
+  background-color: rgb(45, 51, 57);
+  border: 1px solid rgba(118, 135, 181, 1);
+  color: white;
+  border: none;
+  border-radius: 24px;
+  padding: 12px 32px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: 30%;
+  text-align: center;
+}
+.submit-button-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.submit-button:hover {
+  background-color: rgb(159, 184, 210);
+  /* box-shadow: 0 0 20px rgba(74, 144, 226, 0.3); */
+}
+
+/* Icons */
+.email-icon {
+  background: #357ABD center/contain no-repeat;
+  border-radius: 50%;
+}
+
+.phone-icon {
+  background: #357ABD center/contain no-repeat;
+  border-radius: 50%;
+}
+
+.location-icon {
+  background: #357ABD center/contain no-repeat;
+  border-radius: 50%;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .contact-content {
+    gap: 40px;
+  }
+
+  .contact-info {
+    padding-right: 20px;
+  }
+
+  .contact-title-glow-container {
+    width: 400px;
+  }
+}
+
+@media (max-width: 768px) {
+  .contact-content {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    max-width: 100%;
+    margin: 0 auto;
+    text-align: left;
+  }
+
+  .contact-content::before {
+    display: none;
+  }
+
+  .contact-info {
+    padding-right: 0;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+  }
+
+  .contact-title {
+    font-size: 2rem;
+    text-align: left;
+    align-items: flex-start;
+  }
+
+  .contact-subtitle {
+    text-align: left;
+  }
+
+  .contact-description {
+    text-align: left;
+    max-width: 500px;
+    margin: 0 0 40px 0;
+  }
+
+  .contact-details {
+    align-items: flex-start;
+    max-width: 400px;
+    margin: 0;
+    text-align: left;
+  }
+
+  .contact-item {
+    justify-content: flex-start;
+    width: 100%;
+    text-align: left;
+  }
+
+  .contact-item a,
+  .contact-item span {
+    text-align: left;
+  }
+
+  .form-group {
+    width: 100%;
+  }
+
+  .form-group label {
+    text-align: left;
+    display: block;
+  }
+
+  .contact-form {
+    padding: 24px;
+    width: 100%;
+    margin: 0;
+  }
+
+  .form-group input,
+  .form-group textarea {
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .submit-button-container {
+    width: 100%;
+  }
+
+  .contact-title-glow-container {
+    width: 300px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-section {
+    padding: 60px 0;
+  }
+
+  .contact-container {
+    padding: 0 16px;
+  }
+
+  .contact-title {
+    font-size: 1.75rem;
+  }
+
+  .contact-description {
+    font-size: 0.9rem;
+    max-width: 100%;
+    padding: 0 10px;
+  }
+
+  .contact-details {
+    max-width: 100%;
+    padding: 0 20px;
+  }
+
+  .contact-item {
+    font-size: 0.9rem;
+  }
+
+  .contact-form {
+    padding: 20px;
+    width: 100%;
+  }
+
+  .form-group input,
+  .form-group textarea {
+    padding: 10px 14px;
+  }
+
+  .submit-button {
+    width: 50%;
+    padding: 10px 24px;
+  }
+
+  .contact-title-glow-container {
+    width: 250px;
+  }
+
+  .contact-info {
+    padding: 0 10px;
+  }
+
+  .contact-description {
+    padding: 0;
+    text-align: left;
+  }
+
+  .contact-details {
+    padding: 0;
+    width: 100%;
+  }
+
+  .contact-item {
+    padding: 0;
+    justify-content: flex-start;
+    gap: 12px;
+  }
+}
+
+@media (max-width: 360px) {
+  .contact-container {
+    padding: 0 12px;
+  }
+
+  .contact-title {
+    font-size: 1.5rem;
+  }
+
+  .contact-form {
+    padding: 16px;
+  }
+
+  .submit-button {
+    width: 70%;
+  }
+
+  .contact-title-glow-container {
+    width: 200px;
+  }
+}
+.contact-text {
+    position: relative;
+    color: white;
+    padding: 1.5rem;
+    background: rgba(33, 41, 59, 0.4); /* #21293b with opacity */
+    border-radius: 12px;
+    backdrop-filter: blur(10px);
+    box-shadow: 
+        0 8px 32px rgba(33, 41, 59, 0.3),
+        inset 0 0 32px rgba(33, 41, 59, 0.4);
+    z-index: 1;
+}
+
+/* Add subtle glow effect */
+.contact-text::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: 12px;
+    padding: 1px;
+    background: linear-gradient(
+        45deg,
+        transparent,
+        rgba(33, 41, 59, 0.6),
+        rgba(33, 41, 59, 0.8),
+        transparent
+    );
+    -webkit-mask: 
+        linear-gradient(#fff 0 0) content-box, 
+        linear-gradient(#fff 0 0);
+    mask: 
+        linear-gradient(#fff 0 0) content-box, 
+        linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+}
+
+.below-text {
+    position: relative;
+    overflow: hidden;
+    background: rgba(33, 41, 59, 0.4);
+    box-shadow: 0 0 32px rgba(64, 201, 255, 0.15);
+    animation: simpleGlow 4s ease-in-out infinite;
+}
+
+@keyframes simpleGlow {
+    0% {
+        box-shadow: 0 0 32px rgba(64, 201, 255, 0.15);
+    }
+    50% {
+        box-shadow: 0 0 48px rgba(64, 201, 255, 0.25);
+    }
+    100% {
+        box-shadow: 0 0 32px rgba(64, 201, 255, 0.15);
+    }
+}
+
+/* Glow Effect specifically for the title text */
+.contact-title-glow-container {
+  position: absolute;
+  z-index: 0;
+  pointer-events: none;
+  width: 500px;
+  height: 200px;
+  top: 100%;  /* Position right below the text */
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.contact-title-outer-glow {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(91, 105, 139, 0.4);
+  opacity: 0.8;
+  filter: blur(80px);
+  border-radius: 50%;
+}
+
+.contact-title-inner-glow {
+  position: absolute;
+  width: 80%;
+  height: 80%;
+  top: 10%;
+  left: 10%;
+  background: rgba(91, 105, 139, 0.5);
+  opacity: 0.8;
+  filter: blur(100px);
+  border-radius: 50%;
+}

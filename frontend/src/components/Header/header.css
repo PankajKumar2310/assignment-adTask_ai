@@ -1,0 +1,523 @@
+.header-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 1rem;
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(0, 0, 0);
+}
+
+.header {
+  
+box-sizing: border-box;
+text-align: center;
+
+padding: 10px;
+height: 63px;
+left: 132px;
+right: 132px;
+top: 40px;
+width: 70%;
+margin-top: 20px;
+margin-bottom: 10px;
+
+
+background: rgba(92, 96, 105, 0.1);
+border: 1px solid rgba(255, 255, 255, 0.1);
+backdrop-filter: blur(2.5px);
+/* Note: backdrop-filter has minimal browser support */
+border-radius: 24px;
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.logo a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.5rem;
+  font-weight: bold;
+  
+}
+.logo-text{
+  color: white;
+  font-weight: 700px;
+}
+
+.nav-menu {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+
+.call-icon {
+  display: none;
+  width: 14px;
+  height: 14px;
+}
+.nav-item {
+  color: white;
+  text-decoration: none;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.dropdown {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: #000000;
+}
+
+.dropdown-icon {
+  font-size: 0.8rem;
+  color: #666;
+}
+
+.auth-buttons {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.btn {
+  padding: 0.5rem 1.2rem;
+  border-radius: 25px;
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+}
+
+.btn-login {
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: linear-gradient(to top, #504F4F 0%, #000000 50%);
+}
+
+.btn-login:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+.header-logo{
+  height: 40px;
+  width:125px;
+}
+
+.btn-schedule {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: linear-gradient(to top, #515A70 0%, rgb(130, 136, 155) 50%);
+  color: white;
+  border: none;
+}
+
+.btn-schedule:hover {
+  background-color: #4A5568;
+}
+
+/* Add hover effects for nav items */
+.nav-item:hover {
+  color: #CBD5E0;
+}
+
+/* Add some top margin to the main content to account for fixed header */
+main {
+  margin-top: 100px;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .header {
+    border-radius: 25px;
+    padding: 1rem;
+  }
+
+  .header-container {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .nav-menu {
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+  }
+  
+  .auth-buttons {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+/* Desktop Navigation (≥992px) */
+.desktop-nav {
+  display: flex;
+  align-items: center;
+}
+.call-icon {
+  display: none;
+  width: 14px;
+  height: 14px;
+}
+
+.hamburger-menu {
+  display: none;
+}
+
+
+.mobile-nav {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh; /* Full viewport height */
+  background: #000000;
+  z-index: 999;
+}
+
+.mobile-nav.active {
+  display: block;
+}
+
+.mobile-nav-content {
+  padding: 80px 20px 20px; /* Add top padding to account for header */
+  height: 100%;
+  overflow-y: auto; /* Enable scrolling if content is too long */
+  display: flex;
+  flex-direction: column;
+}
+
+/* Ensure the nav items are properly spaced */
+.mobile-nav .nav-item {
+  padding: 15px 0;
+  font-size: 1.2rem;
+  color: white;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.call-icon{
+  display: none;
+}
+
+/* Tablet Styles (≥768px and <992px) */
+@media screen and (max-width: 992px) {
+  .schedule-text {
+    display: none;
+  }
+
+  .call-icon {
+    display: none;
+    width: 14px;
+    height: 14px;
+  }
+  .call-icon-button{
+    display: block;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 8px;
+  }
+
+  .call-icon {
+    display: block;
+    width: 56px;
+    height: 34px;
+    margin-left: 40px;  /* Remove margin when only icon is showing */
+  }
+
+  .btn-schedule {
+    padding: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    display: none;
+  }
+  
+ 
+
+}
+
+/* Mobile Styles (<768px) */
+@media screen and (max-width: 768px) {
+  .desktop-nav {
+    display: none;
+  }
+  .call-icon {
+    display: none;
+    width: 14px;
+    height: 14px;
+  }
+
+  .hamburger-menu {
+    font-family: 'poppins' 'sans-serif';
+    display: block;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 8px;
+  }
+
+  .header-container {
+  
+     display: flex;
+     justify-content: center;
+    padding: 0 15px;
+  }
+
+  .mobile-nav {
+    display: none;
+    /* position: fixed; */
+    top: 70px; /* Adjust this value to match your header height */
+    left: 0;
+    right: 0;
+    width: 100vw;
+    height: calc(100vh - 70px); /* Subtract header height */
+    background: #000000;
+    margin: 0;
+    padding: 0;
+    z-index: 998; /* Slightly lower than header */
+  }
+
+  .mobile-nav.active {
+    display: block;
+    animation: slideIn 0.3s ease;
+  }
+
+  @keyframes slideIn {
+    from {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .mobile-nav-content {
+    padding: 20px 32px; /* Increased side padding */
+    height: 100%;
+    font-family: 'poppins' 'sans-serif';
+    width: 100%;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+  }
+
+  /* Ensure header stays on top */
+  .header {
+    /* position: fixed; */
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 999;
+    background: #000000;
+  }
+
+  /* Mobile Navigation Items */
+  .mobile-nav .nav-item {
+    color: #ffffff;
+    font-size: 24px;
+    font-weight: 500;
+    padding: 15px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    transition: all 0.3s ease;
+    background: #000000;
+    letter-spacing: 0.5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  /* Mobile Dropdown */
+  .mobile-nav .dropdown {
+    background: #000000;
+    position: relative;
+    color: #ffffff;
+    font-size: 24px;
+    font-weight: 500;
+    padding: 15px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  }
+
+  .mobile-nav .dropdown-icon {
+    color: #ffffff;
+    font-size: 18px;
+    margin-left: 10px;
+  }
+
+  /* Mobile Auth Buttons */
+  .mobile-nav .mobile-auth-buttons {
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    background: #000000;
+  }
+
+  .mobile-nav .btn {
+    width: 100%;
+    text-align: center;
+    padding: 16px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+  }
+
+  .mobile-nav .btn-login {
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    background: linear-gradient(to top, #504F4F 0%, #000000 50%);
+  }
+
+  .mobile-nav .btn-schedule {
+    background: linear-gradient(to top, #515A70 0%, rgb(130, 136, 155) 50%);
+    color: white;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .mobile-nav .btn-login:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+
+  .mobile-nav .btn-schedule:hover {
+    background-color: #4A5568;
+  }
+
+  .mobile-nav .call-icon {
+    width: 24px;
+    height: 24px;
+  }
+
+  .header-left {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 0px;
+    margin-bottom: 10px;
+    /* gap: 125px; */
+  }
+
+  .call-icon {
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+  }
+
+  .btn-schedule {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+}
+
+/* Extra Small Screens (<576px) */
+@media screen and (max-width: 576px) {
+  .header-logo {
+    width: 120px;
+  }
+
+  .header-container {
+    padding: 0 10px;
+  }
+}
+
+.menu-icon {
+  color: white;
+  font-size: 32px;  /* Larger icon */
+  transition: transform 0.3s ease;
+}
+
+/* When menu is open, rotate the icon */
+.hamburger-menu.active .menu-icon {
+  transform: rotate(180deg);
+}
+
+/* Call Icon Styles */
+.call-icon {
+  width: 16px;
+  height: 16px;
+  color: white;
+  display: none; /* Hide by default on desktop */
+}
+
+/* Mobile/Tablet styles */
+@media screen and (max-width: 768px) {
+  .schedule-text {
+    display: none; /* Hide text on mobile */
+  }
+
+  .call-icon {
+    display: inline-block; /* Show icon on mobile */
+    width: 14px;
+    height: 14px;
+    margin: 0;
+  }
+
+  .btn-schedule {
+    padding: 8px;
+    justify-content: center;
+    min-width: auto;
+  }
+}
+
+.phone-button {
+  display: none; /* Hidden by default on desktop */
+  padding: 8px;
+  border-radius: 50%;
+  background: linear-gradient(to top, #515A70 0%, rgb(130, 136, 155) 50%);
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: 35px; /* Added fixed width */
+  height: 35px; /* Added fixed height */
+}
+
+.phone-icon {
+  width: 16px;
+  height: 16px;
+  color: white;
+}
+
+/* Tablet/Mobile styles */
+@media screen and (max-width: 992px) { /* Changed to 992px to match schedule button breakpoint */
+  .btn-schedule {
+    display: none;
+  }
+
+  .phone-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .phone-button:hover {
+    background: linear-gradient(to top, #444b5c 0%, rgb(110, 115, 131) 50%);
+    transform: scale(1.05);
+  }
+}
