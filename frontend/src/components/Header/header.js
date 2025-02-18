@@ -1,11 +1,8 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
 import { FiMenu, FiX } from "react-icons/fi";
 import './header.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPhone } from '@fortawesome/free-solid-svg-icons';
-
-
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -20,9 +17,9 @@ const Header = () => {
         <div className="header-container">
           {/* Logo and Hamburger Section */}
           <div className="header-left">
-            <Link to="/" className="logo">
+            <a href="/" className="logo">
               <img src='/images/headerlogo.png' className='header-logo' alt="headerLogo"/>
-            </Link>
+            </a>
             {/* Mobile Hamburger Button */}
             <button className="hamburger-menu" onClick={toggleMenu}>
               {isMenuOpen ? (
@@ -43,20 +40,20 @@ const Header = () => {
               <span>Tools</span>
               <i className="dropdown-icon">▼</i>
             </div>
-            <Link to="/contact" className="nav-item">
+            <a href="/contact" className="nav-item">
               Contact Us
-            </Link>
+            </a>
             <div className="auth-buttons">
-              <Link to="/login" className="btn btn-login">
+              <a href="/login" className="btn btn-login">
                 Login
-              </Link>
-              <Link to="/schedule" className="btn btn-schedule">
+              </a>
+              <a href="/schedule" className="btn btn-schedule">
                 <span className="schedule-text">Schedule Call</span>
                 <FontAwesomeIcon icon={faPhone} className="call-icon" />
-              </Link>
-              <Link to="/schedule" className="phone-button">
+              </a>
+              <a href="/schedule" className="phone-button">
                 <FontAwesomeIcon icon={faPhone} className="phone-icon" />
-              </Link>
+              </a>
             </div>
           </nav>
 
@@ -71,17 +68,17 @@ const Header = () => {
                 <span>Tools</span>
                 <i className="dropdown-icon">▼</i>
               </div>
-              <Link to="/contact" className="nav-item">
+              <a href="/contact" className="nav-item">
                 Contact Us
-              </Link>
+              </a>
               <div className="mobile-auth-buttons">
-                <Link to="/login" className="btn btn-login">
+                <a href="/login" className="btn btn-login">
                   Log in
-                </Link>
-                <Link to="/schedule" className="btn btn-schedule">
+                </a>
+                <a href="/schedule" className="btn btn-schedule">
                   <span className="schedule-text">Schedule Call</span>
                   <FontAwesomeIcon icon={faPhone} className="call-icon" />
-                </Link>
+                </a>
               </div>
             </div>
           </div>
@@ -91,4 +88,4 @@ const Header = () => {
   );
 };
 
-export default Header; 
+export default Header;

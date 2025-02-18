@@ -11,7 +11,7 @@ const Footer = () => {
         <div className="footer-logo-section">
           <Link to="/" className="footer-logo">
           <img src={'/images/footericon.png'} alt="logo" />
-          </Link>
+          </Link>a
           <div className="footer-contact">
             <div className="footer-contact-email">
             <MdOutlineEmail />
