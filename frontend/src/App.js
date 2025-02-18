@@ -1,4 +1,3 @@
-import { BrowserRouter } from 'react-router-dom';
 import './App.css';
 import Header from './components/Header/header';
 import Hero from './components/Hero/Hero';
@@ -12,9 +11,7 @@ import Thanks from './components/Thanks/thanks';
 
 function App() {
   return (
-    <BrowserRouter>
       <div className="app-main">
-        {/* Main Content */}
         <div className="app-content">
           
           <main className="main-content">
@@ -36,7 +33,6 @@ function App() {
           <Footer />
         </div>
       </div>
-    </BrowserRouter>
   );
 }
 
